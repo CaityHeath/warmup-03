@@ -4,13 +4,15 @@ class LinkedList{
   constructor(){
     this.head = null;
   }
+
+
   append(value){
     if(!this.head){
       this.head = new Node(value);
       return;
     }
     let current = this.head;
-    while(current.next){
+    while(current){
       current = current.next;
     }
     current.next = new Node(value);

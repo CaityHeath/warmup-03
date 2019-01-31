@@ -2,6 +2,9 @@
 
 let Node = require('./node.js')
 
+
+
+
 class Queue {
   constructor() {
     this.rear = null;
@@ -11,11 +14,11 @@ class Queue {
 
   enqueue(value) {
     let node = new Node(value);
-    if (!this.front) {
+
+    if(!this.front){
       this.front = node;
       this.rear = node;
-    }
-    else {
+    }else{
       this.rear.next = node;
       this.rear = node;
     }
@@ -23,27 +26,22 @@ class Queue {
 
   
   dequeue() {
-    if (!this.front) {
+    if(!this.front){
       return false;
+    }else{
+      let dqItem = this.front;
+      this.front = dqItem.next;
+      dqItem.next = null;
+      return dqItem.value;
     }
-    else {
-      let dequeuedItem = this.front;
-      this.front = dequeuedItem.next;
-      dequeuedItem.next = null;
-      return dequeuedItem.value;
-    }
-  }
-
+}
 }
 
-
-
 function print(q){
-  console.log(q);
-  let temp;
+  let temp = q.front.value;
   while(q.front){
-    temp = q.dequeue();
     console.log(temp);
+    temp = q.dequeue();
   }
   return;
 }
