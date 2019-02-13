@@ -1,0 +1,26 @@
+{
+  "name": "warmup-03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "practice-linked-list.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaityHeath/warmup-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaityHeath/warmup-03/issues"
+  },
+  "homepage": "https://github.com/CaityHeath/warmup-03#readme",
+  "dependencies": {
+    "eslint": "^5.11.1"
+  }
+}
