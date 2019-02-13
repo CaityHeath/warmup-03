@@ -1,22 +1,15 @@
-'use strict';
-
-let Node = require('./node.js')
-
-
-
-
-class Queue {
-  constructor() {
+class Queue{
+  constructor(){
     this.rear = null;
     this.front = null;
     this.next = null;
   }
 
-  enqueue(value) {
+  enqueue(value){
     let node = new Node(value);
 
     if(!this.front){
-      this.front = node;
+      this.front= node;
       this.rear = node;
     }else{
       this.rear.next = node;
@@ -24,8 +17,7 @@ class Queue {
     }
   }
 
-  
-  dequeue() {
+  dequeue(){
     if(!this.front){
       return false;
     }else{
@@ -34,7 +26,7 @@ class Queue {
       dqItem.next = null;
       return dqItem.value;
     }
-}
+  }
 }
 
 function print(q){
@@ -45,12 +37,3 @@ function print(q){
   }
   return;
 }
-
-let que = new Queue();
-que.enqueue('🤡');
-que.enqueue('🌝');
-que.enqueue('👽');
-que.enqueue('🐉');
-que.enqueue('🐇');
-
-print(que);

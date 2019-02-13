@@ -2,15 +2,15 @@ let Node = require('./node.js');
 
 class LinkedList{
   constructor(){
-    this.head = null;
+    this.head=null;
   }
-
 
   append(value){
     if(!this.head){
       this.head = new Node(value);
       return;
     }
+
     let current = this.head;
     while(current){
       current = current.next;
@@ -18,7 +18,6 @@ class LinkedList{
     current.next = new Node(value);
   }
 }
-
 function print(ll){
   let current = ll.head;
   while(current){
@@ -28,9 +27,4 @@ function print(ll){
   return;
 }
 
-let link = new LinkedList();
-link.append(6);
-link.append(2);
-link.append('c');
 
-print(link);

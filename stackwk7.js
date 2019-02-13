@@ -1,11 +1,9 @@
-'use strict';
-
-let Node = require('./node.js');
+'use strict'
 
 class Stack {
-  constructor(){ 
+  constructor(){
     this.top = null;
-    this.next = null; 
+    this.next = null;
     this.length = 0;
   }
 
@@ -25,9 +23,10 @@ class Stack {
   }
 
   peek(){
-  return this.top.value;
+    return this.top.value;
   }
 }
+
 
 function print(stack){
   let temp;
@@ -37,12 +36,3 @@ function print(stack){
   }
   return;
 }
-
-let st = new Stack();
-st.push(2);
-st.push(4);
-st.push('c');
-st.push('d');
-st.push(6);
-
-print(st);
